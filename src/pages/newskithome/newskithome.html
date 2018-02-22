@@ -1,0 +1,61 @@
+<!-- <ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+    <ion-icon class="icon-menu" name="menu"></ion-icon>
+  </button>
+      <ion-title>Ionic News Kit</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div background-size class="default-background">
+      <div class="ionic-descript" text-center>
+          <h2 item-title>SAVE HOURS</h2>
+          <h2 item-title>OF DEVELOPING</h2>
+          <p item-subtitle>and make apps fast as light!</p>
+      </div>
+  </div>
+</ion-content> -->
+
+<!--- Theme Parallax - New list -->
+<ion-header header-ios>
+  <ion-navbar transparent >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-left>{{'data.headerTitl'}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content elastic-header>
+  <!-- Parallax Big Image -->
+  <div background-size id="elastic-header" [ngStyle]="{'background-image': 'url(assets/images/background/20.jpg)'}">
+    <!--Parallax Header Top-->
+    <div parallax-header>
+      <!--Parallax Subtitle -->
+      <h2 no-margin parallax-subtitle>{{'data.subtitle'}}</h2>
+      <!--Parallax Title -->
+      <h2 no-margin parallax-title>{{'data.title'}}</h2>
+    </div>
+  </div>
+  <!--Content-->
+  <ion-grid no-padding>
+    <ion-row >
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item item-bcg border no-lines *ngFor="let a of process">
+            <!--Content Avatar-->
+            <ion-thumbnail item-start>
+              <img src="assets/images/background/10.jpg" alt="{{'item.imageAlt'}}">
+            </ion-thumbnail>
+            <!--Content Title-->
+            <h2 no-margin item-title>{{'Its Demo'}}</h2>
+            <!--Content Subtitle-->
+            <h3 item-subtitle text-wrap>{{'item.subtitle event:Parallax Start Tracker Grant Marshall'}}</h3>
+            <!--Content Badge-->
+            <ion-badge class="badge-light" item-end>{{'READ'}}</ion-badge>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
